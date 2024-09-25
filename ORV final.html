@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omniscient Reader's Viewpoint</title>
+
+    <style>
+        html {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .bg1 {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: url('https://images.unsplash.com/photo-1570284613060-766c33850e00?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FsYXhpYSUyMGF6dWx8ZW58MHx8MHx8fDA%3D') center center / cover no-repeat;
+        }
+
+        .headicon {
+            width: 80px;
+            display: grid;
+            place-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .cont {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding-right: 5%;
+            margin-left: -15%;
+        }
+
+        h1 {
+            color: rgb(163, 122, 17);
+            font-family: serif;
+            font-size: 20px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-image: linear-gradient(2deg, rgba(122, 91, 22, 0.9) 0%, rgba(0, 0, 0, 0) 90%)
+        }
+
+        .sobre {
+            width: 200px;
+        }
+
+        .characters {
+            width: 200px;
+        }
+
+        .cons {
+            width: 200px;
+        }
+
+        .twos {
+            width: 200px;
+        }
+
+        .webyt {
+            width: 200px;
+        }
+
+        .bgmedio {
+            position: relative;
+            margin: 0;
+            width: 100%;
+        }
+
+        .bg2 {
+            background-image: url(https://i.pinimg.com/originals/c3/90/a6/c390a679c6192aed133b35179d33f0c0.jpg);
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-top: -10px;
+        }
+
+        .about {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .im {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .escenario1 {
+            height: 500px;
+            padding: 20px;
+            padding-left: 100px;
+        }
+
+        h2 {
+            color: rgb(163, 122, 17);
+            padding: 20px;
+            text-shadow: black 20px 10px 8px;
+            font-size: 16px;
+        }
+
+        .esc1 {
+            display: grid;
+            margin: 0;
+            text-align: center;
+            justify-items: center;
+            align-items: center;
+            width: 160%;
+        }
+
+        p {
+            color: rgb(163, 122, 17);
+            line-height: 1.5;
+            font-size: 18px;
+        }
+
+        .firstp {
+            width: 70%;
+            text-align: center;
+            flex: 1;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 100px;
+        }
+
+        h3 {
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            font-size: 16px;
+            border: 2px solid;
+            border-color: grey;
+            border-radius: 8px;
+            background-image: url(https://i.pinimg.com/originals/c3/90/a6/c390a679c6192aed133b35179d33f0c0.jpg);
+            text-transform: uppercase;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+            opacity: 90%;
+            border-width: thin;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+        .bg3 {
+            background-image: url(https://media.istockphoto.com/id/1596798637/photo/4k-night-sky-with-stars-sparkling-on-black-background.webp?b=1&s=170667a&w=0&k=20&c=6Rj3r4Nc_5OIAN-_npK6RMz1ONyF0KpbHUdOgEJ2g4k=);
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-top: -10px;
+            padding-bottom: 20px;
+        }
+
+        .esc2 {
+            display: grid;
+            margin: 0;
+            text-align: center;
+            justify-items: center;
+            align-items: center;
+            padding: 60px;
+            padding-top: 40px;
+            text-shadow: rgb(170, 170, 170) 20px 10px 8px;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 2fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .p1 {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            padding-left: 30px;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background-color: rgb(131, 113, 35, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .name {
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+
+        .description {
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .bg4 {
+            background-image: url(https://wallpapers.com/images/hd/purple-star-1920-x-1200-background-n1gz6atle7t0s07p.jpg);
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-top: -20px;
+            padding-bottom: 20px;
+            background-position: center;
+        }
+
+        .esc3 {
+            padding-left: 50px;
+            text-shadow: rgb(170, 170, 170) 20px 10px 10px;
+            padding-top: 110px;
+        }
+
+        .textdok {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .secondp {
+            width: 50%;
+            text-align: center;
+
+        }
+
+        .dok {
+            width: 300px;
+        }
+
+        h4 {
+            color: red;
+            font-size: 12px;
+            padding-left: 50px;
+            margin-top: -10px;
+        }
+
+        .thirdp {
+            width: 70%;
+            text-align: center;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+        }
+
+        ol {
+            width: 70%;
+            color: rgb(163, 122, 17);
+            line-height: 2;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            line-height: 2;
+            font-size: 18px;
+        }
+
+        .sidelist {
+            width: 250px;
+            padding-left: 120px;
+            margin-top: 80px;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cajaa {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fourthp {
+            width: 70%;
+            text-align: center;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        table {
+            color: rgb(163, 122, 17);
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
+        }
+
+        tbody {
+            border: rgb(250, 250, 250) 3px solid;
+        }
+
+        tr {
+            border: rgb(255, 254, 254) 2px solid;
+        }
+
+        th {
+            background-color: #2d4569;
+            opacity: 95%;
+            padding: 10px;
+        }
+
+        td {
+            padding: 5px;
+            background-color: #2d4569;
+            opacity: 90%;
+        }
+
+        .reaction {
+            width: 150px;
+            padding-left: 70%;
+            margin-top: -200px;
+        }
+
+        .bg5 {
+            background-image: url(https://toppng.com/uploads/preview/stars-starry-sky-purple-dark-shine-11570131337qkijqph0n0.jpg);
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-top: -20px;
+            padding-bottom: 20px;
+            padding-top: 30px;
+            background-position: center;
+        }
+
+        .title {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alert4 {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+        }
+
+        .esc4 {
+            text-shadow: rgb(170, 170, 170) 20px 10px 10px;
+        }
+
+        .container3 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .novel {
+            width: 300px;
+            padding: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+        .se5 {
+            width: 45%;
+            text-align: center;
+        }
+        
+        .container4 {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .columna {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        blockquote {
+            color: rgb(163, 122, 17);
+            line-height: 1.5;
+            font-size: 16px;
+            font-style: italic;
+            width: 60%;
+            margin-left: auto;
+        }
+
+        .msj5 {
+            margin-top: 50px;
+            margin-left: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pretty {
+            width: 250px;
+            height: auto;
+            padding: 30px;
+            margin-right: 250px;
+        }
+
+        .bg6 {
+            background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg);
+            background-size: cover;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            margin-top: -20px;
+            margin-bottom: -20px;
+            padding-bottom: 20px;
+            padding-top: 30px;
+            background-position: center;
+        }
+
+        .esc6 {
+            margin-left: 50px;
+        }
+
+        .page {
+            margin-left: 300px;
+            width: 700px;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .spoti {
+            margin-left: 250px;
+            width: 800px;
+            height: 300px;
+            margin-bottom: -70px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .yt {
+            margin-left: 250px;
+            width: 800px;
+            height: 400px;
+            margin-bottom: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chars {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        select {
+            background-color: #2d4569;
+            color: white;
+            text-align: center;
+        }
+
+        option {
+            background-color: rgb(163, 122, 17);
+        }
+
+        footer {
+            background: url('https://images.unsplash.com/photo-1570284613060-766c33850e00?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FsYXhpYSUyMGF6dWx8ZW58MHx8MHx8fDA%3D') center center / cover no-repeat;
+            text-align: center;
+            padding: 45px; 
+            bottom: 0;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .fotx {
+            color: rgb(163, 122, 17);
+            font-weight: bolder;
+            font-size: 16px;
+        }
+
+        .arrow {
+            width: 40px;
+            height: auto;
+            margin-left: 90%;
+            background-image: linear-gradient(2deg, rgba(122, 91, 22, 0.9) 70%, rgba(0, 0, 0, 0) 90%)
+        }
+
+        .webtoon {
+            width: 30px;
+            height: auto;
+            background-image: linear-gradient(2deg, rgba(122, 91, 22, 0.9) 70%, rgba(0, 0, 0, 0) 90%);
+            margin-top: -3px;
+        }
+
+        .reddit {
+            width: 30px;
+            height: auto;
+            background-image: linear-gradient(2deg, rgba(122, 91, 22, 0.9) 70%, rgba(0, 0, 0, 0) 90%);
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        .wiki {
+            width: 30px;
+            height: auto;
+            background-image: linear-gradient(2deg, rgba(122, 91, 22, 0.9) 70%, rgba(0, 0, 0, 0) 90%);
+            margin-left: 1px;
+            margin-top: -1px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="bg1">
+        <header>
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/015/115/472/small_2x/compass-silhouette-for-icon-symbol-apps-website-pictogram-art-illustration-or-graphic-design-element-format-png.png"
+                class="headicon">
+            <div class="cont">
+                <h1>ORV | INICIO</h1>
+            </div>
+        </header>
+
+        <nav>
+            <h2><a href="#About"><img
+                        src="https://static.vecteezy.com/system/resources/previews/021/665/108/non_2x/gold-star-shotting-gold-star-transparent-gold-bokeh-stars-free-free-png.png"
+                        alt="Sobre ORV" class="sobre"></a></h2>
+            <h2><a href="#Personajes"><img
+                        src="https://static.vecteezy.com/system/resources/thumbnails/021/664/801/small/gold-star-shotting-gold-star-transparent-gold-bokeh-stars-free-free-png.png"
+                        alt="Personajes" class="characters"></a></h2>
+            <h2><a href="#Constelaciones"><img
+                        src="https://static.vecteezy.com/system/resources/previews/021/665/108/non_2x/gold-star-shotting-gold-star-transparent-gold-bokeh-stars-free-free-png.png"
+                        alt="Constelaciones" class="cons"></a></h2>
+            <h2><a href="#TWTS"><img
+                        src="https://static.vecteezy.com/system/resources/thumbnails/021/664/801/small/gold-star-shotting-gold-star-transparent-gold-bokeh-stars-free-free-png.png"
+                        alt="Three Ways of Survival" class="twos"></a></h2>
+            <h2><a href="#Media"><img
+                        src="https://static.vecteezy.com/system/resources/previews/021/665/108/non_2x/gold-star-shotting-gold-star-transparent-gold-bokeh-stars-free-free-png.png"
+                        alt="Media" class="webyt"></a></h2>
+        </nav>
+    </div>
+
+    <main>
+        <div>
+            <img src="https://i.pinimg.com/originals/ae/78/b0/ae78b0d3ed611f0cef5c171a833b6887.jpg" alt="dividerr"
+                class="bgmedio">
+        </div>
+
+        <div class="bg2">
+            <section id="About">
+                <div class="im">
+                    <img src="https://preview.redd.it/small-edit-of-title-card-for-wallpaper-usage-v0-atzgqhd7o7ec1.png?width=640&crop=smart&auto=webp&s=82a707e589f2ad77809c7d492af028b797794a3d"
+                        alt="portada" class="escenario1" usemap="#mapa">
+                        <map name="mapa">
+                            <area target="_blank" alt="mapa" title="mapa" href="https://www.lightnovelworld.co/novel/orv-wn-16091308/chapters" coords="289,624,550" shape="circle">
+                        </map>
+                                       <div class="text1">
+                        <h2 class="esc1">Primer Escenario: Acerca de</h2>
+                        <p class="firstp">Omniscient Reader's Viewpoint es un webtoon coreano que trata sobre una novela
+                            que se vuelve
+                            realidad, trayendo a la vida del protagonista, Kim Dokja, un mundo post-apocalíptico al cual
+                            debe
+                            sobrevivir. La historia presenta un sistema de videojuegos, con varios escenarios que Kim
+                            Dokja y sus compañeros deben
+                            superar para tener mayor probabilidad de salvarse. Si deseas leer la novela del webtoon, haz click en la imagen.</p>
+                        <h3>Has reunido todas las condiciones para superar este escenario.</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div>
+            <img src="https://preview.redd.it/possible-new-reddit-banner-from-webtoon-that-i-cleaned-v0-n6btl12ssbla1.png?auto=webp&s=f0d52e9053081638013282d8e802b717df66ac26"
+                alt="dividerrr" class="bgmedio">
+        </div>
+
+        <div class="bg3">
+            <section id="Personajes">
+                <h2 class="esc2">Segundo Escenario: Personajes</h2>
+                <div class="container">
+                    <img src="https://64.media.tumblr.com/0cfd5801e1c094c96bbb08cf79392f04/9edf837485ee921b-a5/s540x810/24743e56209318593f82c24b06273a50375ddc7f.jpg"
+                        alt="dokja" class="p1">
+                    <div class="overlay">
+                        <div class="name">Kim Dokja</div>
+                        <div class="description">El rey sin cara. Es el personaje principal de ORV y único lector de Tres Fromas de Sobrevivir en un Mundo Destrozado.</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="https://i.pinimg.com/originals/7c/42/9b/7c429baf445b6c4d2734eb4a66ea0042.jpg"
+                        alt="joonghyuk" class="p1">
+                    <div class="overlay">
+                        <div class="name">Yoo Joonghyuk</div>
+                        <div class="description">Personaje principal de Tres Formas de Sobrevivir en un Mundo Destrozado. Eventualmente, conoce a Dokja e incoscientemente comienzan a superar escenarios con la ayuda del otro.</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="https://pbs.twimg.com/media/F5lCOGmbwAASMdm.png" alt="sooyoung" class="p1">
+                    <div class="overlay">
+                        <div class="name">Han Sooyoung</div>
+                        <div class="description">Compañera de Kim Dokja y miembro de la Compañía de Kim Dokja. Es también escritora de novelas, como "SSSSSS-grade Infinite Regressor".</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="https://i.pinimg.com/564x/4f/84/15/4f8415a1f31147a663dc924568f4c967.jpg" alt="sangah"
+                        class="p1">
+                    <div class="overlay">
+                        <div class="name">Yoo Sangah</div>
+                        <div class="description">Compañera esencial de Kim Dokja, patrocinada por los dioses del Olimpo y con unas habilidades fundamentales para la trama.</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="https://i.pinimg.com/736x/6a/76/38/6a7638cca7f86567ad8c5ef08c3c6c0b.jpg" alt="heewon"
+                        class="p1">
+                    <div class="overlay">
+                        <div class="name">Jung Heewon</div>
+                        <div class="description">También forma parte del grupo de Kim Dokja. Al inicio, formaba parte de un grupo marginalizado, pero se vuelve aliada de Dokja y es de las más fuertes del webtoon, siendo referida como la "espada" del grupo.</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="https://i.pinimg.com/564x/4c/c0/7d/4cc07d27ede2da91367929b64446fda4.jpg" alt="jihye"
+                        class="p1">
+                    <div class="overlay">
+                        <div class="name">Lee Jihye</div>
+                        <div class="description">Personaje de Tres Formas de Sobrevivir en un Mundo Destrozado. Compañera de Yoo Joonghyuk y, eventualmente, miembro del grupo de Kim Dokja.</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="https://i.pinimg.com/736x/19/ee/f5/19eef55be429690f296f993c5a66ce85.jpg" alt="hyunsung"
+                        class="p1">
+                    <div class="overlay">
+                        <div class="name">Lee Hyunsung</div>
+                        <div class="description"> Personaje de Tres Formas de Sobrevivir en un Mundo Destrozado. Compañero de Yoo Joonghyuk y, eventualmente, miembro del grupo de Kim Dokja. Es considerado el "escudo".</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="https://i.pinimg.com/originals/72/e0/63/72e063203276a3f32c836565cdc7f197.jpg" alt="kids"
+                        class="p1">
+                    <div class="overlay">
+                        <div class="name">Lee Gilyoung y Shin Yoosung</div>
+                        <div class="description"> Lee Gilyoung no formaba parte de la novela. Se une a Kim Dokja luego de una serie de eventos y, de la misma manera, es muy importante para la historia, en especial luego de ayudar al grupo a sobrevivir al Escenario Principal 1. Shin Yoosung era parte de la novela y luchó con Yoo Joonghyuk, en el presente, se unió a Kim Dokja con un potencial a desarrollar enorme.</div>
+                    </div>
+                </div>
+                <form class="chars">
+                    <h2>Escoge tu favorito</h2>
+                    <label for="chars"></label>
+                    <select id="listchars" name="chars" size="1">
+                        <option>Kim Dokja</option>
+                        <option>Yoo Jonghyuk</option>
+                        <option>Han Sooyoung</option>
+                        <option>Yoo Sangah</option>
+                        <option>Jung Heewon</option>
+                        <option>Lee Jihye</option>
+                        <option>Lee Hyunsung</option>
+                        <option>Lee Gilyoung y Shin Yoosung</option>
+                    </select>
+                </form>
+                <h3>algunas constelaciones están atajando la respiración.</h3>
+            </section>
+        </div>
+
+        <div>
+            <img src="https://i.redd.it/11wkbxytp2i91.jpg" alt="dividerrrr" class="bgmedio">
+        </div>
+
+        <div class="bg4">
+            <section id="Constelaciones">
+                <h2 class="esc3">Tercer Escenario: Constelaciones</h2>
+                <h4>Spoilers. Proceda con precaución.</h4>
+                <div class="textdok">
+                    <p class="secondp">Las constelaciones son seres celestiales que cumplen la función de ser
+                        patrocinadores
+                        de los personajes. Los
+                        observan a través del Stream de las Estrellas realizado por los Dokkaebis (moderadores de los
+                        escenarios) e interactúan con ellos otorgándoles dinero o power-ups. De la misma manera,
+                        los apoyan a través de mensajes. </p>
+                    <img src="https://ih1.redbubble.net/image.5114493570.2078/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
+                        alt="dokkaebi" class="dok">
+                </div>
+                <h3>la constelación "dragón abisal de la llama negra" aplaude.</h3>
+                <h3>la constelación "conspirador secretivo" te está mirando.</h3>
+                <h3>la constelación "jueza del fuego parecida a un demonio" se pregunta quiénes son las demás
+                    constelaciones.</h3>
+                <div class="container2">
+                    <div class="cajaa">
+                        <p class="thirdp">En el webtoon existen varias constelaciones de diferentes rangos, los cuales
+                            determinan cuánto poder poseen para ayudar a un jugador. Así, se dividen en:</p>
+                        <ol type="I">
+                            <li>Constelaciones de Grado Histórico. De menor rango.</li>
+                            <li>Constelaciones de Grado Narrativo o Fábula. De rango medio.</li>
+                            <li>Constelaciones de Grado Mitológico. De mayor rango.</li>
+                        </ol>
+                    </div>
+                    <img src="https://static.wikia.nocookie.net/omniscient-readers-viewpoint/images/2/27/Secretive_Plotter_%28novel%29.JPG/revision/latest/scale-to-width/360?cb=20230604084824"
+                        alt="plotter" class="sidelist">
+                </div>
+                <p class="fourthp">Teniendo en cuenta esos rangos, es posible mencionar las siguientes constelaciones
+                    principales.</p>
+                <table>
+                    <tr>
+                        <th>NOMBRE</th>
+                        <th>RANGO</th>
+                        <th>JUGADOR</th>
+                    </tr>
+                    <tr>
+                        <td>Prisionero de la Venda Dorada</td>
+                        <td>Mitológico</td>
+                        <td>Jang Hayoung</td>
+                    </tr>
+                    <tr>
+                        <td>Jueza del Fuego parecida a un Demonio</td>
+                        <td>Fábula</td>
+                        <td>Jung Heewon</td>
+                    </tr>
+                    <tr>
+                        <td>Dragón Abisal de la Llama Negra</td>
+                        <td>Fábula</td>
+                        <td>Kim Namwoon y Han Sooyoung</td>
+                    </tr>
+                    <tr>
+                        <td>Conspirador Secretivo</td>
+                        <td>Dios del Más Allá</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Dioses del Olimpo</td>
+                        <td>Mitológico</td>
+                        <td>Yoo Sangah</td>
+                    </tr>
+                </table>
+                <h3>la constelación "jueza del fuego parecida a un demonio" aprecia tu explicación.</h3>
+                <h3>Has sido patrocinado 1000 monedas.</h3>
+                <img src="https://static.wikia.nocookie.net/omniscient-readers-viewpoint/images/9/95/Uril_in_webtoon.pnj.jpg/revision/latest?cb=20230802012601"
+                    alt="uriel" class="reaction">
+            </section>
+        </div>
+
+        <div>
+            <img src="https://i.pinimg.com/originals/ac/0c/ee/ac0cee3312ddee87af1e1c3d06f100b9.jpg" alt="dividerrrrr"
+                class="bgmedio">
+        </div>
+
+        <div class="bg5">
+            <section id="TWTS">
+                <h3 class="msj4">Ha aparecido un nuevo sub-escenario.</h3>
+                <h4 class="alert4">Spoilers. Proceda con precaución.</h4>
+                <div class="title">
+                    <h2 class="esc4">Sub-escenario: Tres formas de sobrevivir en un mundo destrozado</h2>
+                </div>
+                <div class="container3">
+                    <img src="https://static.wikia.nocookie.net/omniscient-readers-viewpoint/images/c/c8/Ways_of_Survival_pdf.png/revision/latest?cb=20220812054831"
+                        alt="novel" class="novel">
+                    <p class="se5">Three ways to survive in a ruined world es la novela escrita por tls123 que se volvió realidad en
+                        el mundo de
+                        Omniscient Reader's Viewpoint. Al inicio de la historia, el protagonista, Kim Dokja, era el
+                        único lector a partir de cierto número de capítulos, lo que lo ayudó a avanzar a través de este
+                        desastrozo mundo que se le impuso en frente al saber cómo son los escenarios y deducir las soluciones a
+                        ciertas
+                        situaciones basándose en lo leído. 
+                    </p>
+                </div>
+                <hr>
+                <div class="container4">
+                    <img src="https://i.pinimg.com/736x/12/37/50/1237504af9953431cb98410d3ce24dd0.jpg" alt="dokyjoong" class="pretty">
+                    <div class="columna">
+                    <blockquote>Kim Dokja presenta cariño por el personaje principal de esa novela, Yoo Joonghyuk, ya que dice que lo acompañó hasta el final (de la historia). Por ello, una vez la novela se hace realidad, Dokja hace lo posible para volverse compañero de Joonghyuk y ayudarlo en los escenarios que no puede pasar solo.</blockquote>
+                    <h3 class="msj5">varias constelaciones observan la escena con tristeza y calidez.</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+                <div>
+                    <img src="https://images3.alphacoders.com/136/1362709.jpeg" alt="dividerrrrrr"
+                        class="bgmedio">
+                </div>
+
+
+                <div class="bg6">
+                    <section id="Media">
+                        <h3 class="msj4">¡ha aparecido un escenario oculto!</h3>
+                        <div class="title">
+                            <h2 class="esc4">Escenario oculto: Audiovisuales</h2>
+                        </div>
+                        <div class="container6">
+                           <h2 class="esc6">Lee el webtoon traducido al inglés aquí </h2>
+                            <iframe src="https://flamecomics.me/series/omniscient-readers-viewpoint/" class="page"></iframe>
+                           <h2 class="esc6">Mientras lo lee, le recomendamos escuchar esta canción</h2>
+                           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6VObnIkLVruX4UVyxWhlqm?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" class="spoti"></iframe> 
+                           <h2 class="esc6">Y si está interesado en una adaptación del webtoon, mire este tráiler</h2>
+                           <iframe src="https://www.youtube.com/embed/jzIGTLlqeRE" title="Omniscient Reader | OFFICIAL TRAILER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="yt"></iframe>
+                        </div>
+                    </section>
+                </div>
+
+                <footer>
+                    <a href="#About"> <input type="image" src="https://static.vecteezy.com/system/resources/previews/017/784/924/original/top-arrow-icon-on-transparent-background-free-png.png" alt="Inicio" class="arrow"></a>
+                    <h4 class="fotx">2024 &#169; Omniscient Reader's Viewpoint</h4>
+                    <div class="icons">
+                    <a href="https://www.webtoons.com/en/action/omniscient-reader/list?title_no=2154" target="_blank"><input type="image" src="https://cdn.icon-icons.com/icons2/3915/PNG/512/webtoon_logo_icon_249203.png" class="webtoon"></a>
+                    <a href="https://www.reddit.com/r/OmniscientReader/" target="_blank"><input type="image" src="https://static.vecteezy.com/system/resources/previews/023/986/922/original/reddit-logo-reddit-logo-transparent-reddit-icon-transparent-free-free-png.png" class="reddit"></a>
+                    <a href="https://omniscient-readers-viewpoint.fandom.com/wiki/Omniscient_Reader%E2%80%99s_Viewpoint_Wiki" target="_blank"><input type="image" src="https://yenpress.com/uploads/orv-square.jpg" class="wiki"></a>
+                    </div>
+                </footer>
+
+    </main>
+
+</body>
+
+</html>
